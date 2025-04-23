@@ -1,0 +1,20 @@
+{
+  "name": "grpc-typescript-client",
+  "version": "1.0.0",
+  "description": "gRPC TypeScript Client Example",
+  "main": "dist/client.js",
+  "scripts": {
+    "build": "tsc",
+    "generate-proto": "proto-loader-gen-types --longs=String --enums=String --defaults --oneofs --grpcLib=@grpc/grpc-js --outDir=proto/ ../proto/service.proto",
+    "start": "ts-node src/client.ts"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.8.14",
+    "@grpc/proto-loader": "^0.7.7",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.0",
+    "typescript": "^5.0.4"
+  }
+}
